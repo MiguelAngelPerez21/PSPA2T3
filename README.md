@@ -101,7 +101,7 @@ Podemos comprobar que las dos ultimas aplicaciones no funcionan correctamente de
 java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar | java -jar contadorPalabras.jar
 ```
 
-![Captura tuberias](tuberiasImagen.png)
+![Captura tuberias](tuberiaImagen.png)
 
 ---
 
