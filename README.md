@@ -1,7 +1,7 @@
 # 🎯 PSPA2T3
 
 ¡Hola! Bienvenido al proyecto **PSPA2T3** 😊  
-Este repositorio contiene el desarrollo correspondiente al tema 3 de PSPA2.
+Este repositorio contiene el desarrollo de la actividad correspondiente al tema 3 de PSP.
 
 ---
 
@@ -11,12 +11,16 @@ Aquí tienes una vista general de la estructura de carpetas (según cómo esté 
 
 ```
 PSPA2T3/
-├── src/              ← Código fuente
-│   ├── Main.java     ← Punto de entrada (ejemplo)
-│   └── …             ← Otros archivos Java
-├── tests/            ← Pruebas unitarias / casos de test
-├── docs/             ← Documentación adicional
-└── README.md         ← Este archivo
+├── lectorTexto/
+│ ├── src/ ← Código fuente del lector de texto
+│
+├── contadorPalabras/
+│ ├── src/ ← Código fuente del contador de palabras
+│
+├── filtrarLineas/
+│ ├── src/ ← Código fuente del filtrador de líneas
+│
+└── README.md ← Este archivo principal
 ```
 
 > 💡 Ajusta los nombres de carpetas si tu estructura es diferente.
@@ -32,30 +36,19 @@ Sigue estos pasos para ejecutar o probar el proyecto:
    git clone https://github.com/MiguelAngelPerez21/PSPA2T3.git
    ```
 
-2. Entra en la carpeta del proyecto  
+2. Extrae la carpeta  Actividad_Tema_3.1 y ejecuta cmd en la ruta 
    ```bash
-   cd PSPA2T3
+   cd /Actividad_Tema_3.1
    ```
 
-3. Compila el código  
-   Por ejemplo, si usas `javac`:
+3. Ejecuta la aplicación con java -jar  y concatena con |
    ```bash
-   javac -d bin src/**/*.java
+   java -jar aplicacion.jar | java -jar ...
    ```
-
-4. Ejecuta la aplicación  
-   ```bash
-   java -cp bin Main
-   ```
-
-5. (Opcional) Ejecuta las pruebas  
-   Si has configurado un framework de tests (JUnit, etc.), corre los tests correspondientes.
-
----
 
 ## 🎯 Objetivos del proyecto
 
-- Implementar los enunciados del **Tema 3** de PSPA2.  
+- Implementar los enunciados del **Tema 3** de PSP.  
 - Aplicar conceptos vistos en clase: concurrencia, sincronización, procesos/hilos, etc.  
 - Realizar pruebas para validar el comportamiento esperado.  
 
@@ -71,6 +64,34 @@ Aquí algunos puntos que deberían cumplirse (dependiendo del enunciado real):
 - 📊 Casos de prueba y comprobaciones de resultados  
 
 ---
+
+## 🧪 Manual de pruebas con tuberías
+
+Además de ejecutarlos de forma independiente, se pueden encadenar con tuberías (|) para procesar la salida de un programa como la entrada del siguiente.
+
+▶️ Ejecución independiente
+
+Ejemplo con lectorTexto:
+```
+java -jar lectorTexto.jar archivo.txt
+```
+
+Ejemplo con contadorPalabras:
+```
+java -jar contadorPalabras.jar archivo.txt
+```
+
+Ejemplo con filtrarLineas:
+```
+java -jar filtrarLineas.jar archivo.txt
+```
+
+▶️ Ejecución encadenada con tuberías
+
+Podemos combinar los tres programas en una tubería para que se comuniquen entre sí:
+```
+java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar "filtro" | java -jar contadorPalabras.jar
+```
 
 ## 📌 Notas importantes
 
