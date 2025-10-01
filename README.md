@@ -116,7 +116,7 @@ java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar | java -jar 
 ## ✍ Autores y créditos
 
 - Desarrollado por **Miguel Ángel Pérez**  
-- Basado en el enunciado del **Tema 3 de PSPA2**
+- Basado en el enunciado del **Tema 3 de PSP**
 
 ---
 
