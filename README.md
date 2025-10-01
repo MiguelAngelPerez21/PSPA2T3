@@ -46,6 +46,8 @@ Sigue estos pasos para ejecutar o probar el proyecto:
    java -jar aplicacion.jar | java -jar ...
    ```
 
+---
+
 ## 🎯 Objetivos del proyecto
 
 - Implementar los enunciados del **Tema 3** de PSP.  
@@ -73,25 +75,27 @@ Además de ejecutarlos de forma independiente, se pueden encadenar con tuberías
 
 Ejemplo con lectorTexto:
 ```
-java -jar lectorTexto.jar archivo.txt
+java -jar lectorTexto.jar 
 ```
 
 Ejemplo con contadorPalabras:
 ```
-java -jar contadorPalabras.jar archivo.txt
+java -jar contadorPalabras.jar 
 ```
 
 Ejemplo con filtrarLineas:
 ```
-java -jar filtrarLineas.jar archivo.txt
+java -jar filtrarLineas.jar 
 ```
 
 ▶️ Ejecución encadenada con tuberías
 
-Podemos combinar los tres programas en una tubería para que se comuniquen entre sí:
+Podemos comprobar que las dos ultimas aplicaciones no funcionan correctamente de forma individual, pero podemos unirlas con tuberías para que cumplan su función:
 ```
-java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar "filtro" | java -jar contadorPalabras.jar
+java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar | java -jar contadorPalabras.jar
 ```
+
+---
 
 ## 📌 Notas importantes
 
