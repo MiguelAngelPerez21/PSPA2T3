@@ -85,10 +85,14 @@ Ejemplo con contadorPalabras:
 java -jar contadorPalabras.jar 
 ```
 
+![Captura contadorPalabras](contadorPalabrasImagen.png)
+
 Ejemplo con filtrarLineas:
 ```
 java -jar filtrarLineas.jar 
 ```
+
+![Captura filtrarLineas](filtrarLineasImagen.png)
 
 ▶️ Ejecución encadenada con tuberías
 
@@ -96,6 +100,8 @@ Podemos comprobar que las dos ultimas aplicaciones no funcionan correctamente de
 ```
 java -jar lectorTexto.jar archivo.txt | java -jar filtrarLineas.jar | java -jar contadorPalabras.jar
 ```
+
+![Captura tuberias](tuberiasImagen.png)
 
 ---
 
