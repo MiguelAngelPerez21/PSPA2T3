@@ -78,6 +78,8 @@ Ejemplo con lectorTexto:
 java -jar lectorTexto.jar 
 ```
 
+![Captura lectorTexto](lectorTextoImagen.png)
+
 Ejemplo con contadorPalabras:
 ```
 java -jar contadorPalabras.jar 
